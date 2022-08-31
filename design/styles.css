@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url("/images/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+}
+
+.content-left{
+    color: #fff;
+    margin: 15%;
+    max-width: max-content;
+}
+
+
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: max-content; /*Responsive: width: auto*/
+    text-align: center;
+    margin: auto;
+}
+
+.content-right .info{
+    color: #fff;
+    padding: 1em;
+    width: 90%;
+    filter: drop-shadow(0px 5px 10px #666 ); /*Sombra*/
+    background-color: hsl(248, 32%, 49%);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 200px;
+}
+
+.content-left h1{
+    font-size: 3em;
+}
+
+/* Form */
+
+.register form{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 3em;
+    box-sizing: border-box; 
+    margin: 1em; 
+    border-radius: 10px;
+    background-color: #fff;
+    filter: drop-shadow(0px 5px 10px #666 ); /*Sombra*/
+    box-shadow: 200px;
+}
+
+.register input{
+    width: auto;
+    margin-bottom: 1em;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border-color: hsl(246, 25%, 77%);
+}
+
+.register form p{
+    color: hsl(246, 25%, 77%);
+}
+
+.register form a{
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+}
+
+/*Agregar con javascript en la validacion*/
+.error input{
+    border-color: hsl(0, 100%, 74%) ;
+    visibility: hidden;
+    background: url(/images/icon-error.svg) no-repeat right;
+}
+
+/* Button */
+#btn-trial{
+    width: auto;
+    height: auto;
+    color: #fff;
+    background-color: hsl(154, 59%, 51%);
+    padding: 20px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*Footer*/
+.attribution { 
+    margin-top: 2%;
+    font-size: 11px; text-align: center; 
+    max-width: 200%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
