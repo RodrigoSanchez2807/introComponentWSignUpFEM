@@ -35,7 +35,7 @@ body{
     color: #fff;
     padding: 1em;
     width: 90%;
-    filter: drop-shadow(0px 5px 10px #666 ); /*Sombra*/
+    filter: drop-shadow(0px 5px 10px #666 ); 
     background-color: hsl(248, 32%, 49%);
     margin: auto;
     border-radius: 10px;
@@ -48,7 +48,7 @@ body{
 
 /* Form */
 
-.register form{
+.register #form-sub{
     display: flex;
     flex-direction: column;
     padding: 3em;
@@ -56,11 +56,11 @@ body{
     margin: 1em; 
     border-radius: 10px;
     background-color: #fff;
-    filter: drop-shadow(0px 5px 10px #666 ); /*Sombra*/
+    filter: drop-shadow(0px 5px 10px #666 );
     box-shadow: 200px;
 }
 
-.register input{
+.register #form-sub input{
     width: auto;
     margin-bottom: 1em;
     padding: 10px;
@@ -69,25 +69,33 @@ body{
     border-radius: 10px;
 }
 
-.register form p{
+.register #form-sub .terms{
     color: hsl(246, 25%, 77%);
 }
 
-.register form a{
+.register #form-sub .terms a{
     color: hsl(0, 100%, 74%);
     text-decoration: none;
 }
 
-/*Agregar con javascript en la validacion*/
+/*Adding with JavaScript*/
+/* contains the icon and border */
 .error {
-    background: url(/images/icon-error.svg) no-repeat right;
+    background: url(/images/icon-error.svg) no-repeat 97%;
     border-color: hsl(0, 100%, 74%);
 }
 
-.message{
+/* styles of error text below the inputs */
+#message, #message2, #message3, #message4{
+    display: none;
+
+    font-style: italic;
+    font-size: 0.7em;
     color: hsl(0, 100%, 74%);
     text-align: right;
+    margin-top: -10px;
 }
+
 
 /* Button */
 #btn-trial{
@@ -102,6 +110,11 @@ body{
     font-size: 0.8em;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+#btn-trial:hover{
+    background-color: hsl(154, 71%, 66%);
+    opacity: 10;
 }
 
 /*Footer*/
