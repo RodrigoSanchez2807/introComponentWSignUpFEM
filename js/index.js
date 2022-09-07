@@ -1,11 +1,9 @@
-const form = document.querySelector('#form-sub');
-
 const firstName = document.querySelector('#first-name');
 const lastName = document.querySelector('#last-name');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
-//Regular expression for email
+//Regular expression for email validation
 const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 eventListeners();
@@ -49,21 +47,37 @@ function validation(e) {
         break;
     
         case "e-mail":
-            console.log('Email input');
+
+            if(email.type === 'email'){
+
+               if(regex.test( email.value)){
+
+                email.classList.remove('error'); 
+
+                email.placeholder = 'Email Address';
+        
+                document.getElementById('message3').style.display = 'none';
 
 
+               }else{
+
+                email.classList.add('error');
+
+                email.placeholder = 'email@example.com';
+    
+                document.getElementById('message3').style.display = 'block';
+               }
+
+            }
 
             if(email.value === '') {
             
                 email.classList.add('error');
+
+                email.placeholder = 'email@example.com';
     
                 document.getElementById('message3').style.display = 'block';
-                       
-                        
-            }else {
-                email.classList.remove('error'); 
-        
-                document.getElementById('message3').style.display = 'none';
+         
             }
             
         break;
