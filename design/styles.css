@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: max-content; /*Responsive: width: auto*/
+    width: auto;
     text-align: center;
     margin: auto;
 }
@@ -131,4 +131,18 @@ body{
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .content-left{
+        text-align: center;
+    }
 }
