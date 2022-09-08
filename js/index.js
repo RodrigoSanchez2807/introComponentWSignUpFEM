@@ -3,6 +3,8 @@ const lastName = document.querySelector('#last-name');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
+const form = document.querySelector('#form-sub');
+
 //Regular expression for email validation
 const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
@@ -15,10 +17,14 @@ function eventListeners() {
     email.addEventListener('blur', validation);
     password.addEventListener('blur', validation);
 
+    form.addEventListener('submit', validation);
+
 }
 
 function validation(e) {
 
+    e.preventDefault();
+    
     switch (e.target.name) {
         case "first_Name":
             if(firstName.value === '') {
